@@ -103,11 +103,12 @@ function Register()
                 }}          
             />
             <button type="submit">Register</button>
+            <p className="forgot-password text-right mt-2">
+            Already a user?  <a href="/login">Login</a>
+        </p>
             </form>
         </div>
-        <p className="forgot-password text-right mt-2">
-            Already a user?  <a href="/login">Login</a>
-          </p>  
+        
             
     )
 }
