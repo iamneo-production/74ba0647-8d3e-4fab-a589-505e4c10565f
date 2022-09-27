@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import {Link} from 'react-router-dom';
 import "../components/registation.css";
  
 function Register()
@@ -48,8 +49,8 @@ function Register()
             <p>Fill in the Information Below</p>
  
             <input type="text"
-             name="id"
-             placeholder="id"
+             name="role"
+             placeholder="Role"
                     
              onChange={(event) =>
               {
@@ -58,8 +59,8 @@ function Register()
             />
  
             <input type="text"
-            name="firstname"
-            placeholder="Firstname"
+            name="email"
+            placeholder="Email Address"
             onChange={(event) =>
                 {
                     setFname(event.target.value);      
@@ -67,8 +68,8 @@ function Register()
             />
  
             <input type="text"
-            name="lastname"
-            placeholder="lastname"
+            name="username"
+            placeholder="Username"
             onChange={(event) =>
                 {
                     setLname(event.target.value);      
@@ -77,16 +78,16 @@ function Register()
  
             
             <input type="text"
-            name="city"
-            placeholder="city"
+            name="mobile"
+            placeholder="Mobile Number"
             onChange={(event) =>
                 {
                     setCity(event.target.value);      
                 }}          
             />
         <input type="text"
-            name="phone"
-            placeholder="phone"
+            name="pass"
+            placeholder="Password"
             onChange={(event) =>
                 {
                     setPhone(event.target.value);      
@@ -94,21 +95,20 @@ function Register()
             />
  
     <input type="text"
-            name="salary"
-            placeholder="salary"
+            name="cnfrmpass"
+            placeholder="Conform Password"
             onChange={(event) =>
                 {
                     setSalary(event.target.value);      
                 }}          
             />
- 
             <button type="submit">Register</button>
- 
-    
-            </form>    
- 
-    
+            </form>
         </div>
+        <p className="forgot-password text-right mt-2">
+            Already a user?  <a href="/login">Login</a>
+          </p>  
+            
     )
 }
  
