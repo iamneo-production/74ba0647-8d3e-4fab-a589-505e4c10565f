@@ -10,6 +10,8 @@ function App() {
     const [eventdate , seteventdate] = useState('');
     const [eventtime , seteventtime] = useState('');
     const [numberofpeople , setnumberofpeople] = useState('');
+	const [vegitems, setvegitems ] = useState('');
+	const [nonvegitems, setnonvegitems] = useState('');
 	const handleChange =(e)=>{
 	seteventname(e.target.value);
 	}
@@ -33,7 +35,14 @@ function App() {
 	}
 	const handlenumberofpeopleChange =(e)=>{
 	setnumberofpeople(e.target.value);
-	}	
+	}
+	const handlevegitemsChange =(e)=>{
+	setvegitems(e.target.value);
+	}
+	const handlenonvegitemsChange =(e)=>{
+	setnonvegitems(e.target.value);
+	}		
+
 	const handleSubmit=(e)=>{
 		alert('Event Details Added Succesfully :"' );
     }
@@ -73,6 +82,14 @@ return (
 	    Number of people:
 		</label>
 		<input type="number" value={numberofpeople} required onChange={(e)=> {handlenumberofpeopleChange(e)}} /> <br/>
+		<label >
+	    Number of veg items:
+		</label>
+		<input type="number" value={vegitems} required onChange={(e)=> {handlevegitemsChange(e)}} /> <br/>
+		<label >
+	    Number of non-veg items:
+		</label>
+		<input type="number" value={nonvegitems} required onChange={(e)=> {handlenonvegitemsChange(e)}} /> <br/>
 		<input type="submit" value="Submit"/>
 		<br/><br/>
 	</form>	
