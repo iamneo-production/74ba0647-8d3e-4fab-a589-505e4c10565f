@@ -1,12 +1,14 @@
 import { useState } from "react";
-import {BrowserRouter,Switch,Route} from 'react-router-dom';
 import {Link} from 'react-router-dom';
+import "./components/UserNavbar.css";
 const UserNavbar=()=>{
     return(
-        <div>
+        <div className="nav-bar">
             <ul>
-                <li>Book Event</li>
-                <li>View Booked Events</li>
+                <li>User Dashboard</li>
+                <Link to="/user/bookevent"><li>Book Event</li></Link>
+                <Link to="/user/viewbooked"><li>View Booked Events</li></Link>
+                <Link to="/logout"><li>Logout</li></Link>
             </ul>
         </div>
     );

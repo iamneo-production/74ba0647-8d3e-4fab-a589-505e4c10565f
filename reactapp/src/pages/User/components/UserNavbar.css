@@ -1,0 +1,20 @@
+Link{
+    float:left;
+    padding:10px;
+}
+.nav-bar{
+    background-color: bisque;
+    height:50px;
+    width:100%;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  li{
+      float:left;
+      padding:10px 50px;
+      font-weight: bold;
+      font-size: medium;
+  }

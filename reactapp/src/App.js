@@ -1,4 +1,5 @@
 import Register from "./pages/registation";
+import User from "./pages/User/User";
 import Auth from "./pages/Auth";
 import './App.css';
 import {BrowserRouter,Switch,Route} from 'react-router-dom';
@@ -8,7 +9,10 @@ function App() {
     <div className="App">
        <BrowserRouter>
         <Switch>
-          <Route path="/" exact>
+        <Route path="/user" exact>
+          <User />
+        </Route>
+          <Route path="/user/signup" exact>
               <Register/>
           </Route>
           <Route path="/login" component={Auth}/>

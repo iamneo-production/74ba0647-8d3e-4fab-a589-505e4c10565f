@@ -29,7 +29,7 @@ export default function (props) {
             </button>
           </div>
           <p className="text-right mt-2">
-            New user/admin <a href="#">Register</a>
+            New user/admin <a href="/user/signup">Register</a>
           </p>
         </div>
       </form>

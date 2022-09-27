@@ -1,0 +1,12 @@
+.bookings-container{
+    padding-top:50px;
+}
+.card-div{
+    padding:0px 0px 10px 0px;
+    width:fit-content;
+    border-radius: 10px;
+    background-color: rgba(65, 255, 239, 0.637);
+    margin:20px;
+    float:left;
+    box-shadow: 0px 0px 10px rgb(186, 192, 194);
+}
