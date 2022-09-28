@@ -2,45 +2,49 @@ import React, {useState} from 'react';
 import './App.css';
 
 function App() {
-	const [eventname , seteventname] = useState('');
-    const [applicantname , setapplicantname] = useState('');
-    const [applicantmobileno , setapplicantmobileno] = useState('');;
-	const [email , setEmail] = useState('');
-    const [eventadd , seteventadd] = useState('');
-    const [eventdate , seteventdate] = useState('');
-    const [eventtime , seteventtime] = useState('');
-    const [numberofpeople , setnumberofpeople] = useState('');
-	const [vegitems, setvegitems ] = useState('');
-	const [nonvegitems, setnonvegitems] = useState('');
+	const [eventName , seteventName] = useState('');
+    const [applicantName , setapplicantName] = useState('');
+	const [applicantAddress , setapplicantAddress] = useState('');
+    const [applicantMobileNo , setapplicantMobileNo] = useState('');
+	const [applicantEmailid , setapplicantEmailid] = useState('');
+	const [eventAddress , seteventAddress] = useState('');
+    const [eventDate , seteventDate] = useState('');
+    const [eventTime , seteventTime] = useState('');
+    const [noOfPeople , setnoOfPeople] = useState('');
+	const [quantityOfVeg, setquantityOfVeg ] = useState('');
+	const [quantityOfNonVeg, setquantityOfNonVeg] = useState('');
 	const handleChange =(e)=>{
-	seteventname(e.target.value);
+	seteventName(e.target.value);
 	}
-	const handleapplicantnameChange =(e)=>{
-	setapplicantname(e.target.value);
+	const handleapplicantNameChange =(e)=>{
+	setapplicantName(e.target.value);
 	}
-    const handleapplicantmobilenoChange =(e)=>{
-    setapplicantmobileno(e.target.value);
+	const handleapplicantAddressChange =(e)=>{
+	setapplicantAddress(e.target.value);
+	}
+    const handleapplicantMobileNoChange =(e)=>{
+    setapplicantMobileNo(e.target.value);
     }
-    const handleEmailChange =(e)=>{
-    setEmail(e.target.value);
+    const handleapplicantEmailidChange =(e)=>{
+    setapplicantEmailid(e.target.value);
     }
-    const handleeventaddChange =(e)=>{
-    seteventadd(e.target.value);
+    const handleeventAddressChange =(e)=>{
+    seteventAddress(e.target.value);
     }
-    const handleeventdateChange =(e)=>{
-	seteventdate(e.target.value);
+    const handleeventDateChange =(e)=>{
+	seteventDate(e.target.value);
 	}
-	const handleeventtimeChange =(e)=>{
-	seteventtime(e.target.value);
+	const handleeventTimeChange =(e)=>{
+	seteventTime(e.target.value);
 	}
-	const handlenumberofpeopleChange =(e)=>{
-	setnumberofpeople(e.target.value);
+	const handlenoOfPeopleChange =(e)=>{
+	setnoOfPeople(e.target.value);
 	}
-	const handlevegitemsChange =(e)=>{
-	setvegitems(e.target.value);
+	const handlequantityOfVegChange =(e)=>{
+	setquantityOfVeg(e.target.value);
 	}
-	const handlenonvegitemsChange =(e)=>{
-	setnonvegitems(e.target.value);
+	const handlequantityOfNonVegChange =(e)=>{
+	setquantityOfNonVeg(e.target.value);
 	}		
 
 	const handleSubmit=(e)=>{
@@ -50,48 +54,65 @@ return (
 	<div className="App">
 	<header className="App-header">
 	<form onSubmit={(e) => {handleSubmit(e)}}>	
+	    <div className ="label">
 		<label >
-		Event Name:
+		Event Name :
 		</label>
-		<input type="text" value={eventname} required onChange={(e)=> {handleChange(e)}} /> <br/>
+		<input type="text" value={eventName} required onChange={(e)=> {handleChange(e)}} /> <br/>
+
 		<label >
-		Applicant Name:
+		Applicant Name :
 		</label>
-		<input type="text" value={applicantname} required onChange={(e)=> {handleapplicantnameChange(e)}} /> <br/>
+		<input type="text" value={applicantName} required onChange={(e)=> {handleapplicantNameChange(e)}} /> <br/>
+
 		<label >
-		Applicant Mobileno:
+		Applicant Address :
 		</label>
-		<input type="number" value={applicantmobileno} required onChange={(e)=> {handleapplicantmobilenoChange(e)}} /> <br/>
+		<input type="text" value={applicantAddress} required onChange={(e)=> {handleapplicantAddressChange(e)}} /> <br/>
+		
+		<label >
+		Applicant Mobileno :
+		</label>
+		<input type="number" value={applicantMobileNo} required onChange={(e)=> {handleapplicantMobileNoChange(e)}} /> <br/>
+
 		<label>
-		Email:
+		Email :
 		</label>
-		<input type="email" value={email} required onChange={(e)=> {handleEmailChange(e)}} /> <br/>
+		<input type="email" value={applicantEmailid} required onChange={(e)=> {handleapplicantEmailidChange(e)}} /> <br/>
+
 		<label>
-		Event Add:
+		Event Address :
 		</label>
-		<input type="text" value={eventadd} required onChange={(e)=> {handleeventaddChange(e)}} /> <br/>
+		<input type="text" value={eventAddress} required onChange={(e)=> {handleeventAddressChange(e)}} /> <br/>
+
 		<label >
-		Event Date:
+		Event Date :
 		</label>
-		<input type="date" value={eventdate} required onChange={(e)=> {handleeventdateChange(e)}} /> <br/>
+		<input type="date" value={eventDate} required onChange={(e)=> {handleeventDateChange(e)}} /> <br/>
+
 		<label >
-		Event Time:
+		Event Time :
 		</label>
-		<input type="time" value={eventtime} required onChange={(e)=> {handleeventtimeChange(e)}} /> <br/>
+		<input type="time" value={eventTime} required onChange={(e)=> {handleeventTimeChange(e)}} /> <br/>
+
 		<label >
-	    Number of people:
+	    Number of people :
 		</label>
-		<input type="number" value={numberofpeople} required onChange={(e)=> {handlenumberofpeopleChange(e)}} /> <br/>
+		<input type="number" value={noOfPeople} required onChange={(e)=> {handlenoOfPeopleChange(e)}} /> <br/>
+
 		<label >
-	    Number of veg items:
+	    Number of veg items :
 		</label>
-		<input type="number" value={vegitems} required onChange={(e)=> {handlevegitemsChange(e)}} /> <br/>
+		<input type="number" value={quantityOfVeg} required onChange={(e)=> {handlequantityOfVegChange(e)}} /> <br/>
+
 		<label >
-	    Number of non-veg items:
+	    Number of non-veg items : 
 		</label>
-		<input type="number" value={nonvegitems} required onChange={(e)=> {handlenonvegitemsChange(e)}} /> <br/>
+		<input type="number" value={quantityOfNonVeg} required onChange={(e)=> {handlequantityOfNonVegChange(e)}} /> <br/>
+
 		<input type="submit" value="Submit"/>
 		<br/><br/>
+		</div>
 	</form>	
 	</header>
 	</div>

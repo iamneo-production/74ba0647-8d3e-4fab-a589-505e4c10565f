@@ -2,9 +2,9 @@
   text-align: left;
   }
   .App-header {
-  margin: 50px;
-  padding: 50px;
-  background-color: white;
+
+  padding: 10px;
+  background-color: rgb(214, 214, 214);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -12,5 +12,9 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: black;
+  }
+  .App-label{
+    padding:100px;
+    margin:150px;
   }
   
