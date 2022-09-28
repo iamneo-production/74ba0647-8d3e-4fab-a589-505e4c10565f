@@ -9,4 +9,16 @@
     margin:20px;
     float:left;
     box-shadow: 0px 0px 10px rgb(186, 192, 194);
+    text-align: center;
+}
+.bookbtn{
+    display:block;
+    background-color: brown;
+    border-radius: 3px;
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+    width:fit-content;
+    padding:5px;
+    left:10px;
 }

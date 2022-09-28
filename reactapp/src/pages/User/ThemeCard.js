@@ -1,6 +1,8 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 import Logout from "../Logout.js";
+
 import "./components/Booking.css";
 function ThemeCard() {
   return (
@@ -13,7 +15,8 @@ function ThemeCard() {
           Place: Hydherebadh
           Ratting: 4.5
         </Card.Text>
-        <Button variant="primary">Book Now</Button>
+        <a  href="/user/booknow">Book Now</a>
+        <Link className="bookbtn" to="/user/bookevent"><li>Book Now</li></Link>
       </Card.Body>
     </Card>
     </div>
