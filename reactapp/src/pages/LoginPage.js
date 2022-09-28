@@ -68,10 +68,7 @@ const LoginPage=({loading,error,...props})=>{
     console.log("Loading ",loading);
 
     return (
-        <div className="login-page">
-                   
-              
-                                            
+        <div className="login-page">                          
         <section className="h-100">
         <div className="container h-100">
        

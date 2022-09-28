@@ -15,8 +15,7 @@ function ThemeCard() {
           Place: Hydherebadh
           Ratting: 4.5
         </Card.Text>
-        <a  href="/user/booknow">Book Now</a>
-        <Link className="bookbtn" to="/user/bookevent"><li>Book Now</li></Link>
+        <Link className="bookbtn" to="/user/bookevent">Book Now</Link>
       </Card.Body>
     </Card>
     </div>

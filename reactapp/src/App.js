@@ -10,17 +10,18 @@ import { Dashboard } from './pages/dashboard/dashboard';
 function App() {
   return (
     <div className="App">
-      <Route exact path="/" component={LoginPage}/>
-          <Route exact path="/dashboard" component={Dashboard}/>
+      
        <BrowserRouter>
         <Switch>
+        <Route exact path="/login" component={LoginPage}/>
+          <Route exact path="/dashboard" component={Dashboard}/>
         <Route path="/user" exact>
           <User />
         </Route>
           <Route path="/user/signup" exact>
               <Register/>
           </Route>
-          <Route path="/login" component={Auth}/>
+          <Route path="/" component={Auth}/>
       </Switch>
     </BrowserRouter>
     </div>
